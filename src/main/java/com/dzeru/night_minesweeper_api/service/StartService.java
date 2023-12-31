@@ -1,6 +1,5 @@
 package com.dzeru.night_minesweeper_api.service;
 
-import com.dzeru.night_minesweeper_api.dto.GameDto;
 import com.dzeru.night_minesweeper_api.generator.FieldGenerator;
 import com.dzeru.night_minesweeper_api.model.Game;
 import org.springframework.stereotype.Service;
@@ -18,6 +17,6 @@ public class StartService {
 
     public Game startGame(int horizontal, int vertical) {
         var field = fieldGenerator.generateField(horizontal, vertical);
-        return new Game(UUID.randomUUID().toString(), field.field(), 0, 0, field.minesAll(), true);
+        return new Game(UUID.randomUUID().toString(), field.field(), 1, 2, field.minesAll(), true);
     }
 }

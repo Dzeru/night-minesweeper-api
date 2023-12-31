@@ -1,7 +1,7 @@
 package com.dzeru.night_minesweeper_api.model;
 
 public enum FieldObject {
-    WALL('w'), MINE('m');
+    EMPTY('e'), WALL('w'), MINE('m');
 
     public final char character;
 
