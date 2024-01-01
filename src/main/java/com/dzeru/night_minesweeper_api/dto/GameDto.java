@@ -1,6 +1,7 @@
 package com.dzeru.night_minesweeper_api.dto;
 
-public record GameDto(int x,
+public record GameDto(String id,
+                      int x,
                       int y,
                       boolean north,
                       boolean northEast,

@@ -17,6 +17,6 @@ public class StartService {
 
     public Game startGame(int horizontal, int vertical) {
         var field = fieldGenerator.generateField(horizontal, vertical);
-        return new Game(UUID.randomUUID().toString(), field.field(), 1, 2, field.minesAll(), true);
+        return new Game(UUID.randomUUID().toString(), field.field(), 1, 1, field.minesAll(), true);
     }
 }

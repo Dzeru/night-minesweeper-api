@@ -29,7 +29,7 @@ public class FieldGenerator {
             for (int k = 0; k < field[i].length; k++) {
                 System.out.print(field[i][k]);
             }
-            System.out.println("");
+            System.out.println();
         }
 
         return new Field(field, minesCount);

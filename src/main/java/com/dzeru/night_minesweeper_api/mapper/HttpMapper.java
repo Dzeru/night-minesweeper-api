@@ -1,9 +1,11 @@
 package com.dzeru.night_minesweeper_api.mapper;
 
 import com.dzeru.night_minesweeper_api.dto.GameDto;
-import com.dzeru.night_minesweeper_api.model.FieldObject;
 import com.dzeru.night_minesweeper_api.model.Game;
 import org.springframework.stereotype.Component;
+
+import static com.dzeru.night_minesweeper_api.model.FieldObject.isMine;
+import static com.dzeru.night_minesweeper_api.model.FieldObject.isWall;
 
 @Component
 public class HttpMapper {
@@ -63,14 +65,6 @@ public class HttpMapper {
             northWest = false;
         }
 
-        return new GameDto(x, y, north, northEast, east, southEast, south, southWest, west, northWest, game.isAlive(), game.minesAll(), minesNearby);
-    }
-
-    private boolean isWall(char cell) {
-        return cell == FieldObject.WALL.character;
-    }
-
-    private boolean isMine(char cell) {
-        return cell == FieldObject.MINE.character;
+        return new GameDto(game.id(), x, y, north, northEast, east, southEast, south, southWest, west, northWest, game.isAlive(), game.minesAll(), minesNearby);
     }
 }
